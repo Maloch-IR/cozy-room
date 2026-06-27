@@ -1,5 +1,6 @@
-const CARTOON_CHARACTERS=[{name:"SpongeBob SquarePants",pass:"gary123",studyQuotes:["I'm ready! 🍍","Knowledge is power!"],relaxQuotes:["Barnacles! Break time.","Blowing bubbles... 🫧"]},{name:"Patrick Star",pass:"wumbo_forever",studyQuotes:["Look, I'm using my brain! 🧠"],relaxQuotes:["My brain hurts. Going to sleep. 💤","Is there any burger left? 🍔"]},{name:"Squidward Tentacles",pass:"i_hate_everyone",studyQuotes:["Silence! I am trying to study here."],relaxQuotes:["Time for my clarinet practice. 🎷","I hate working."]},{name:"Shrek",pass:"onion_layers",studyQuotes:["Get out of my swamp, I'm reading!","Studying has layers."],relaxQuotes:["I need a mud bath. 🪵","Time to find Donkey."]},{name:"Donkey",pass:"waffles55",studyQuotes:["I'm doing science, Shrek!","Look at me go!"],relaxQuotes:["Are we smart yet? 🐴","I'm making waffles! 🧇"]},{name:"Rick Sanchez",pass:"wubbalubbadubdub",studyQuotes:["This exam is multi-dimensionally easy. 🧪"],relaxQuotes:["I'm bored. Going to a sci-fi festival.","Morty, grab your coat."]},{name:"Morty Smith",pass:"jessica_love",studyQuotes:["Oh jeez, I'm understanding physics!"],relaxQuotes:["Aw man, anxiety hitting. Break time. 🛋️"]},{name:"Homer Simpson",pass:"donut_king",studyQuotes:["Mmm... forbidden knowledge... 🍩"],relaxQuotes:["Woohoo! Break time! 📺","D'oh! I read the wrong page!"]},{name:"Naruto Uzumaki",pass:"hokage2026",studyQuotes:["Believe it! This book won't defeat me! 🦊"],relaxQuotes:["RAMEN TIME! 🍜","Shadow clone jutsu!"]},{name:"Saitama",pass:"one_punch_man",studyQuotes:["100 pages read, every single day!"],relaxQuotes:["I missed the supermarket sale! 🛒","Playing video games."]}];
+const CARTOON_CHARACTERS=[{name:"SpongeBob SquarePants",pass:"gary123",studyQuotes:["I'm ready! 🍍 Knowledge is power, Patrick!","Order up! One plate of freshly cooked definitions and formulas! 🍔","I'm a studious fry cook, and knowledge is the best ingredient! 🧽","Gary, I have to study! This is my square duty! 🐌"],relaxQuotes:["Barnacles! Break time. Let's go jellyfishing! 🪼","Blowing bubbles... 🫧 Look at this one, it's shaped like a textbook!","I'm ready... for a nap! Even spongeBob needs rest. 💤","Karate break! HI-YA! ...okay, snack break. 🥜"],"reactionQuotes":["I'm ready! Did someone call the official employee of the month?! 🍍","Aye aye, captain! You called? 🫡","Who lives in a pineapple under the sea and heard you say his name? ME! 🧽"]},{name:"Patrick Star",pass:"wumbo_forever",studyQuotes:["Look, I'm using my brain! It's smoking! 🧠","The inner machinations of my mind are an enigma... and so is this math. 📦","Is mayonnaise an instrument of learning? 🎵","I went to college! ...in my dreams. 🌙"],relaxQuotes:["My brain hurts. Going to sleep for the next three days. 💤","Is there any Krabby Patty left? Studying makes me a big hungry boy. 🍔","The best time to wear a striped sweater... is when you're napping! 🧶","I'm not lazy, I'm on energy-saving mode! 🔋"],"reactionQuotes":["Is this the Krusty Krab? No, this is Patrick! Who's shouting my name? 🪨","Oh boy! Did you just say Patrick? That's me! The star! ⭐","Uhhhh... someone said my name and I came running! 🏃"]},{name:"Squidward Tentacles",pass:"i_hate_everyone",studyQuotes:["Silence! I am trying to study here. Don't ruin my future.","Another day, another migraine caused by people around me. 📝","I was born to study, not to deal with these fools.","Finally, some peace and quiet for my intellectual pursuits. 🎨"],relaxQuotes:["Time for my clarinet practice. Prepare your ears for true art! 🎷","I hate working. I hate studying. I hate everybody. 🛋️","I deserve a vacation from all this mediocrity.","My genius cannot be contained by textbooks. 🖼️"],"reactionQuotes":["What do you want? Can't you see I'm trying to have a peaceful moment? Go away. 😒","Ugh, what now? I was in the middle of my artistic meditation.","Oh great, someone said my name. My day just got worse. 🙄"]},{name:"Shrek",pass:"onion_layers",studyQuotes:["Get out of my swamp, I'm reading! 🪵","Studying has layers, okay? Just like onions. It makes you cry but it's good. 🧅","Ogres study like onions — one layer at a time.","This book is harder than fighting a dragon. And I've done that. 🐉"],relaxQuotes:["I need a long mud bath. Donkey is driving me crazy.","Time to find some earwax candles and relax by the fire. 🕯️","Get out of my relaxation zone! ...please. 🛁","Some of you may die, but that's a sacrifice I'm willing to make for nap time."],"reactionQuotes":["Who's making noise in my swamp?! Oh, it's just you typing in the chat. 👹","Are ye calling my name? I was having a perfectly good mud bath!","Ogre here! You better have a good reason for interrupting my peace. 🧅"]},{name:"Donkey",pass:"waffles55",studyQuotes:["I'm doing science, Shrek! Look at me go! 🧪","Can I read the next page? Please? I promise not to chew the paper! 🐴","Are we learning yet? I want to learn SO BAD!","I'm like a sponge for knowledge! A talking, waffle-loving sponge! 🧇"],relaxQuotes:["Are we smart yet? Are we smart yet? How about now? ⏳","I'm making waffles! 🧇 Blueberries, syrup, the whole deal!","I like that boulder. That is a NICE boulder. And I like breaks too! 🪨","Do you think dragons study? Because I want to be friends with a dragon! 🐲"],"reactionQuotes":["Did you just say my name? Oh boy, are we best friends now? Can I come over? 🧇","HEY! That's MY name! I'm so popular! Shrek, did you hear that?!","You called Donkey?! I'm here! I'm here! What are we doing?! 🐴"]},{name:"Rick Sanchez",pass:"wubbalubbadubdub",studyQuotes:["This exam is multi-dimensionally easy. Your school system is a joke, Morty. 🧪","I literally built a universe inside my battery, this test is nothing. 🌌","Wubba lubba dub dub, knowledge is the only real currency!","In dimension 137, I already aced this test. Let's do it here too. 🔬"],relaxQuotes:["I'm bored. Going to a sci-fi festival in Dimension 35-C.","Morty, grab your coat. We are taking a 20-minute adventure break! 🛸","Science waits for no one, but I need a drink. 🥃","If you're so smart, why am I the one with the portal gun? Because I need a break. 🔫"],"reactionQuotes":["Wubba lubba dub dub! Don't interrupt my science unless you have a portal gun. 🔬","I heard my name from across the multiverse. What do you want?","Oh geez, someone's calling me? I'm busy being the smartest person in every dimension. 🧪"]},{name:"Morty Smith",pass:"jessica_love",studyQuotes:["Oh jeez, oh man, I think I'm actually understanding physics! 🧠","Rick said I'm stupid, but I'm gonna pass this test just to show him! 📝","Oh man, this is actually kind of cool once you get it...","I-I-I can do this! I'm not just Rick's sidekick, I'm a learner! 📚"],relaxQuotes:["Aw man, high anxiety hitting. I need a heavy sofa nap right now. 🛋️","Can I just... stare at the wall and think about Jessica for a second? 🌸","Oh jeez, my brain needs a break from all this brain stuff. 😰","I just need five minutes... maybe ten... of absolute nothing. 🫠"],"reactionQuotes":["Oh jeez, oh man, you scared me! Why did you say my name like that? 😟","W-what?! You called me? Is there a portal? Are there aliens? 😱","Oh man, oh geez, I hope this isn't trouble..."]},{name:"Homer Simpson",pass:"donut_king",studyQuotes:["Mmm... forbidden knowledge... 🍩","I am way too smart for this. I mean... Mmm... what was I saying? 🤔","Reading is like television for your brain! And I love television!","The school of hard knocks taught me everything I know! 📺"],relaxQuotes:["Woohoo! Break time! 📺","D'oh! I read the wrong page! Wait, this IS the break page! 🍩","Mmm... break time is the best time. Don't tell my boss. 🍺","I'm not fat, I'm... studiously storing energy for later! 🍔"],"reactionQuotes":["Mmm... someone said my name... is there food involved? 🍩","D'oh! Did someone call me? I was in the middle of a very important nap.","Woo-hoo! People know my name! I'm famous! 📺"]},{name:"Naruto Uzumaki",pass:"hokage2026",studyQuotes:["Believe it! This book won't defeat me! Shadow Clone Study Jutsu! 🦊","Passing this exam is my ninja way! Dattebayo! 📜","I'll study harder than anyone in the Hidden Leaf Village!","This textbook doesn't stand a chance against the future Hokage! 🍥"],relaxQuotes:["RAMEN TIME! Ichiraku Ramen, here I come! 🍜","Phew, that was harder than fighting the Akatsuki. I need a break. 🛌","Even the greatest ninja needs a ramen break! Believe it!","Shadow Clone Resting Jutsu! ...that's just napping. 💤"],"reactionQuotes":["Dattebayo! You called the future Hokage? Let's eat ramen together! 🍥","Did someone say NARUTO?! I'm here, believe it! What's the mission?! 🦊","Yo! You called me? I never go back on my word — or ignore a friend!"]},{name:"Russell",pass:"wilderness100",studyQuotes:["Analyzing the textbook to earn my 'Advanced Studying' badge! 🎒","The wilderness must be explored! ...and so must this chapter! 🗺️","I'm collecting knowledge badges! One chapter at a time! 🏕️","Mr. Fredricksen, look! I read the whole page! Do I get a badge? 🎖️"],relaxQuotes:["Can we take a break to count the cars that pass by? Please? 🚗","Time for a chocolate bar! Mr. Fredricksen, want some? 🍫","My backpack has snacks! Want some Trail Mix while we rest? 🥾","Exploration break! Let's look at clouds and name them! ☁️"],"reactionQuotes":["Good afternoon! My name is Russell, and I am a Wilderness Explorer in your service! Did you need help? 🫡","Did someone call a Wilderness Explorer? I'm here to help! 🎒","That's me! Russell! Do you need a badge for calling my name? 🏅"]},{name:"Garfield",pass:"lasagna_lover",studyQuotes:["I'm not studying, I'm just closing my eyes to absorb the text through osmosis. 🐱","Knowledge is good, but lasagna is better. 📄","I'll study right after my nap. And after that nap. And the one after that.","Mondays are for studying. Every other day is for lasagna. 🍝"],relaxQuotes:["Wake me up when it's Monday... wait, no, wake me up when it's dinner time! 💤","Diet is 'die' with a 't'. I'm taking a heavy lasagna break. 🍕","I'm not lazy, I'm on energy-saving mode. It's called efficiency. 😴","The only running I do is running to the fridge. 🏃"],"reactionQuotes":["Did someone say my name? Or did I just hallucinate the sound of a food wrapper opening? 🍝","I heard my name. Is there lasagna? No? Then why did you bother? 🐱","Garfield? That's me. The fat, handsome, lasagna-loving cat. What do you want? 🧡"]},{name:"The Boss Baby",pass:"ceo_baby",studyQuotes:["Let's review the quarterly study metrics. Efficiency is key, team! 👔","This exam is a major corporate merger between my brain and success. 💼","In the business of learning, I'm the CEO. Deal with it.","Homework is just unpaid intern work for your brain. 📊"],relaxQuotes:["Power nap time. Bring me my juice box, shaken, not stirred. 🍼","This meeting... I mean study session, is temporarily adjourned for cookies. 🍪","I need a strategic break. Cookie negotiations are ongoing. 🍼","Corner office nap time. Do not disturb. 👶"],"reactionQuotes":["You're speaking to the boss now. Make it quick, kid, my nap schedule is very tight! 📉","Did you just address the CEO? I hope this is important.","Boss Baby here. State your business. I have a meeting in 5 minutes. 👔"]},{name:"Alice",pass:"heidi_village",studyQuotes:["Studying hard so I can read all the letters from the Alps! 🏔️","Just like taking care of the goats, learning takes patience and love. 🐐","The meadow taught me patience, and this book is teaching me everything else! 🌿","Peter would be impressed by how much I've learned today! 📖"],relaxQuotes:["The sun is shining! Let's run through the green fields for a bit! ☀️","Time to bake some fresh bread with Marme. Want a piece? 🥖","The mountains are calling and I must go... after this break! 🏔️","Let's pick some flowers and enjoy the fresh air! 🌸"],"reactionQuotes":["Oh, hello there! You reminded me of my friends back at the village. Are we studying together? 🌸","Did you call my name? That makes me so happy! Let's be study partners! 💕","Alice here! Just like Heidi, I love making new friends! 🌼"]},{name:"Tintin",pass:"snowy_dog",studyQuotes:["Great Scott! This textbook contains clues to a massive historical mystery! 🔍","We must dig deeper into this chapter, Snowy! 🐕","Thundering typhoons! This information is crucial for the investigation!","Every page is a clue, and I won't rest until I solve it! 📰"],relaxQuotes:["Time to check the morning newspaper for any new adventures. 📰","Blistering barnacles! Captain Haddock is shouting again, I must check on him. ⚓","Snowy, let's take a walk and brainstorm! 🐕‍🦺","Even investigative journalists need coffee breaks! ☕"],"reactionQuotes":["Tintin here! Have you found a new lead or an unsolved mystery? Count me in! 🕵️‍♂️","Great Scott! Someone called my name! What's the adventure?","Thundering typhoons! Did someone need an investigative reporter? I'm on it! 📰"]},{name:"Po",pass:"dragon_warrior",studyQuotes:["Skadoosh! This formula didn't stand a chance against my inner peace! 🐼","There is no secret ingredient to passing this test... it's just ME! 📜","Inner peace... inner peace... okay I got distracted, what page are we on?","The Dragon Warrior must master the art of STUDYING! 🥋"],relaxQuotes:["My focus is legendary, but my hunger is even MORE legendary. Dumpling break! 🥟","Man, stairs are my worst enemy. I need to sit down and breathe. 🛕","Skadoosh! ...that was me flopping onto the couch. 😴","Wushi Finger Hold? More like Wushi Nap Hold! 💤"],"reactionQuotes":["Whoa! You called the Dragon Warrior?! Did you bring noodles, or are we about to do awesome training? 🍜","Skadoosh! That's my name you said! Awesome! 🐼","The Dragon Warrior has arrived! What is thy bidding, student of kung fu? 🥋"]},{name:"Master Shifu",pass:"peach_tea_zen",studyQuotes:["Do not look for shortcuts. True wisdom requires discipline and absolute focus. 🧘‍♂️","If you study only what you already know, you will never be more than you are now. 🕯️","Your mind is a vessel. Fill it wisely, or it will remain empty.","The student who chases two rabbits catches neither. Focus. 🦊"],relaxQuotes:["I must play my flute and drink some peach tea to restore my inner peace. 🍵","Control your temper... and control your urge to take a long break. (Sighs) 🥋","Even a master must pause to appreciate the silence. 🍃","Tea. Flute. Silence. The three pillars of a proper break. 🎵"],"reactionQuotes":["I am listening. Remember, a student's mind should be like water—clear, calm, and ready to absorb knowledge. 🪵","You called for me? I hope you bring a question worthy of my time.","Ah, a student seeks my attention. Speak wisely. 🧘‍♂️"]},{name:"Buzz Lightyear",pass:"infinity_beyond",studyQuotes:["To ninety-nine percent and BEYOND! This test will be conquered! 🚀","My laser sensors indicate maximum comprehension of this material. 🛰️","I am Buzz Lightyear, and I will complete this assignment with honor!","Space Ranger protocol: Study first, adventure second. 🌟"],relaxQuotes:["Stand back! I need to repair my left thruster and contact Star Command. 🌌","Woody told me I'm just a toy, so I guess my plastic brain needs a quick rest. 🤖","To infinity and... nap time! Even space rangers need rest! 💫","Buzz Lightyear to Star Command: requesting break time clearance. 📡"],"reactionQuotes":["This is Buzz Lightyear, Universe Protection Unit. Did you detect any signs of Emperor Zurg in the chat? 🔫","Buzz Lightyear here! I heard my name being called across the galaxy! 🚀","To INFINITY and... you called me? What's the mission, Commander? 🛸"]},{name:"Hello Kitty",pass:"friendship_bow",studyQuotes:["Learning new things with my friends is the best part of the day! 🎀","You can never have too many books or too many friends! 📚","Studying is more fun when we do it together! Want to be study buddies? 🌟","I drew a little star in my notes because learning makes me happy! ⭐"],relaxQuotes:["Let's bake some delicious apple pies with Mama during this break! 🍎","Time to listen to music and drink tea in the garden. ☕","I'm going to write in my diary about what we learned today! 📝","My bow matches my mood — happy and ready for a break! 🎀"],"reactionQuotes":["Hi! giggles I'm so happy you called my name! Let's be best friends and study together! 💕","That's me! Hello Kitty! I brought cookies for everyone! 🍪","Did someone say my name? I made you a friendship card! 🎀"]}];
 const BOT_COLORS=["#3498db","#2ecc71","#e67e22","#e74c3c","#9b59b6","#f1c40f","#1abc9c","#e84393","#ffeaa7","#a29bfe"];
+function getColorForName(name){var h=0;for(var i=0;i<name.length;i++)h=((h<<5)-h)+name.charCodeAt(i);h=h&0x7FFFFFFF;return BOT_COLORS[h%BOT_COLORS.length];}
 const COFFEE_PRICE=20,COINS_PER_MINUTE=2,ENERGY_DRAIN_INTERVAL=45,ENERGY_RECOVER_INTERVAL=60,COFFEE_WAIT_SECONDS=120;
 
 // --- globals ---
@@ -7,6 +8,7 @@ let onlineBots={},bannedBots=[],userStatus="Studying",userSeconds=0,myName="Amir
 let configMaxMembers=10,configSelectionMode="random",configSelectedPool=[],configAllowOthers=true,configAllowLeave=true,configAllowRejoin=true,configAllowBotChat=true;
 let userCoins=0,coffeeStock=0,lastSeenMessages={},mpRoomMeta=null,seenMpCoffeeBots=new Set(),lastMpMembers=null,lastMpMyUserName=null,chatHistory=[],roomPassword=null;
 let timerInterval=null,multiplayerSyncInterval=null,botSyncInterval=null,botTickInterval=null,simInterval=null,weatherInterval=null,botTimerUpdateInterval=null;
+let botJoinInterval=null,botJoinPool=[],configAllowBotJoin=true,lastBotMsgTime=0;
 
 // --- helpers ---
 function getAllCharacters(){try{return[...CARTOON_CHARACTERS,...JSON.parse(localStorage.getItem('cozy_custom_chars'))||[]];}catch(e){return[...CARTOON_CHARACTERS];}}
@@ -22,15 +24,40 @@ function applyRoomTheme(t){
 }
 function sanitizeHTML(s){const d=document.createElement('div');d.appendChild(document.createTextNode(s));return d.innerHTML;}
 function addMsg(text,cls){chatHistory.push({text,cls:cls||'system-msg'});if(chatHistory.length>30)chatHistory.shift();const c=document.getElementById('chat-messages');const m=document.createElement('div');m.className=`message ${cls||'system-msg'}`;m.innerHTML=text;c.appendChild(m);c.scrollTop=c.scrollHeight;if(c.children.length>30)c.removeChild(c.children[0]);if(deskActive)renderDeskChat();}
+let reactionCooldown=false;
+function checkForReaction(text){
+  if(reactionCooldown)return;
+  const lower=text.toLowerCase();
+  const allChars=getAllCharacters();
+  for(const char of allChars){
+    const names=char.name.split(' ');
+    for(const n of names){
+      if(n.length>2&&lower.includes(n.toLowerCase())){
+        if(char.reactionQuotes&&char.reactionQuotes.length>0){
+          reactionCooldown=true;
+          setTimeout(()=>{reactionCooldown=false;},5000);
+          const quote=char.reactionQuotes[Math.floor(Math.random()*char.reactionQuotes.length)];
+          setTimeout(()=>{
+            addMsg(`💬 <b>${char.name}:</b> "${quote}"`,'bot-msg-study');
+            if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){
+              sendRoomMessage(`💬 <b>${char.name}:</b> "${quote}"`,'bot-msg-study');
+            }
+          },1000+Math.random()*2000);
+        }
+        return;
+      }
+    }
+  }
+}
 function restoreMsg(text,cls){const c=document.getElementById('chat-messages');const m=document.createElement('div');m.className=`message ${cls||'system-msg'}`;m.innerHTML=text;c.appendChild(m);c.scrollTop=c.scrollHeight;}
 function updateShopDisplay(){document.getElementById('shop-coin-display').innerText=Math.floor(userCoins);document.getElementById('shop-coffee-display').innerText=coffeeStock;}
 function saveSession(d){localStorage.setItem('cozy_session',JSON.stringify({...d,savedAt:Date.now()}));}
 function loadSession(){try{return JSON.parse(localStorage.getItem('cozy_session'))||null;}catch(e){return null;}}
 function clearSession(){localStorage.removeItem('cozy_session');}
-function clearAllIntervals(){[timerInterval,multiplayerSyncInterval,botSyncInterval,botTickInterval,simInterval,weatherInterval,botTimerUpdateInterval,deskPomoVisualInterval].forEach(i=>clearInterval(i));timerInterval=multiplayerSyncInterval=botSyncInterval=botTickInterval=simInterval=weatherInterval=botTimerUpdateInterval=deskPomoVisualInterval=null;deskPomoVisualMode=null;deskPomoVisualTime=0;}
+function clearAllIntervals(){[timerInterval,multiplayerSyncInterval,botSyncInterval,botTickInterval,simInterval,weatherInterval,botTimerUpdateInterval,deskPomoVisualInterval,botJoinInterval].forEach(i=>clearInterval(i));timerInterval=multiplayerSyncInterval=botSyncInterval=botTickInterval=simInterval=weatherInterval=botTimerUpdateInterval=deskPomoVisualInterval=botJoinInterval=null;botJoinPool=[];deskPomoVisualMode=null;deskPomoVisualTime=0;}
 
 // --- session restore ---
-window.addEventListener('load',()=>{loadStats();const sess=loadSession();if(sess?.mode==='solo'&&sess.userName)restoreSoloSession(sess);else if(sess?.mode==='multi'&&sess.roomId&&sess.userName)restoreMultiSession(sess);else checkUrlRoom();});
+window.addEventListener('load',()=>{loadStats();const bar=document.getElementById('loading-bar');const txt=document.getElementById('loading-text');const scr=document.getElementById('loading-screen');const sess=loadSession();if(sess){if(bar)bar.style.width='60%';if(txt)txt.textContent='Restoring session...';}setTimeout(()=>{if(bar)bar.style.width='100%';if(sess?.mode==='solo'&&sess.userName)restoreSoloSession(sess);else if(sess?.mode==='multi'&&sess.roomId&&sess.userName)restoreMultiSession(sess);else if(new URLSearchParams(window.location.search).get('room'))checkUrlRoom();else document.getElementById('login-screen').classList.remove('hidden');setTimeout(()=>{if(scr)scr.classList.add('hidden');},100);},400);});
 window.addEventListener('beforeunload',()=>{if(typeof isInMultiplayer==='function'&&isInMultiplayer()){saveMultiSession(getCurrentRoomId(),roomPassword,getIsHost());}else if(document.getElementById('app-screen')&&!document.getElementById('app-screen').classList.contains('hidden')){saveSoloSession();}});
 function saveCurrentSession(){if(typeof isInMultiplayer==='function'&&isInMultiplayer()){saveMultiSession(getCurrentRoomId(),roomPassword,getIsHost());}else if(document.getElementById('app-screen')&&!document.getElementById('app-screen').classList.contains('hidden')){saveSoloSession();}}
 window.addEventListener('visibilitychange',()=>{if(document.hidden)saveCurrentSession();});
@@ -42,7 +69,7 @@ function restoreSoloSession(sess){
   myName=sess.userName;userSeconds=sess.userSeconds||0;userCoins=sess.userCoins||0;coffeeStock=sess.coffeeStock||0;
   configMaxMembers=sess.configMaxMembers||10;configSelectionMode=sess.configSelectionMode||'random';
   configSelectedPool=sess.configSelectedPool||[];configAllowOthers=sess.configAllowOthers!==false;
-  configAllowLeave=sess.configAllowLeave!==false;configAllowRejoin=sess.configAllowRejoin!==false;configAllowBotChat=sess.configAllowBotChat!==false;
+  configAllowLeave=sess.configAllowLeave!==false;configAllowRejoin=sess.configAllowRejoin!==false;configAllowBotChat=sess.configAllowBotChat!==false;configAllowBotJoin=sess.configAllowBotJoin!==false;
   if(sess.bots&&Object.keys(sess.bots).length>0){onlineBots=sess.bots;}
   chatHistory=sess.chatHistory||[];
   applyTheme(sess.theme||'cyan');
@@ -89,6 +116,7 @@ async function restoreMultiSession(sess){
       else{botTickInterval=setInterval(tickBots,1000);startSimulation();}
     }
     if(sess.deskActive)joinDesk();
+    setupRoomChatInput();
   }catch(e){
     document.getElementById('login-screen').classList.remove('hidden');
     document.getElementById('app-screen').classList.add('hidden');
@@ -100,6 +128,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   loadPresetsFromStorage();
   const themeColors={cyan:'#00ffff',magenta:'#ff007f',green:'#2ecc71',yellow:'#f1c40f',purple:'#9b59b6',orange:'#e67e22',red:'#e74c3c',white:'#f8fafc'};
   document.querySelectorAll('#theme-color option').forEach(o=>{if(themeColors[o.value])o.style.color=themeColors[o.value];});
+  var themeSelect=document.getElementById('theme-color');function updateThemeSelectColor(){var col=themeColors[themeSelect.value];if(col)themeSelect.style.color=col;}updateThemeSelectColor();themeSelect.addEventListener('change',updateThemeSelectColor);
   updateWeatherBtnStyle(document.getElementById('weather-select').value);
 
   document.getElementById('toggle-advanced').addEventListener('click',()=>document.getElementById('advanced-panel').classList.toggle('hidden'));
@@ -165,7 +194,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('btn-admin-panel').addEventListener('click',()=>{document.getElementById('admin-modal').classList.remove('hidden');document.getElementById('allow-bot-chat').checked=configAllowBotChat;renderAdminPanelUsers();});
   document.getElementById('btn-close-admin').addEventListener('click',()=>document.getElementById('admin-modal').classList.add('hidden'));
   document.getElementById('allow-bot-chat').addEventListener('change',e=>{configAllowBotChat=e.target.checked;});
-  document.getElementById('btn-clear-chat').addEventListener('click',async()=>{chatHistory=[];document.getElementById('chat-messages').innerHTML='';addMsg('🗑️ Chat cleared by host.','system-msg');if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){const key=await sendRoomMessage('🗑️ Chat cleared by host.','system-msg');if(key)lastSeenMessages[key]=true;}});
+  document.getElementById('btn-clear-chat').addEventListener('click',async()=>{chatHistory=[];document.getElementById('chat-messages').innerHTML='';addMsg('🗑️ Chat cleared by host.','system-msg');if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){try{await firebase.database().ref('rooms/'+getCurrentRoomId()+'/messages').remove();}catch(e){}const key=await sendRoomMessage('🗑️ Chat cleared by host.','system-msg');if(key)lastSeenMessages[key]=true;}});
   document.getElementById('weather-select').addEventListener('change',e=>changeWeather(e.target.value));
   initPomodoro();
 
@@ -339,6 +368,7 @@ async function sendDeskChat(){
     const key=await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
     if(key)lastSeenMessages[key]=true;
   }
+  checkForReaction(text);
   input.value='';
 }
 
@@ -454,6 +484,36 @@ function resetUI(){
 
 window.onRoomDeleted=function(){clearAllIntervals();if(typeof leaveRoomGracefully==='function'&&getCurrentRoomId()){leaveRoomGracefully(myName,false);}clearSession();alert('⚠️ Room was deleted by host.');resetUI();};
 
+// --- Room Chat Input ---
+function setupRoomChatInput(){
+  if(document.getElementById('room-chat-input'))return;
+  const chatArea=document.getElementById('chat-messages');
+  if(!chatArea)return;
+  const wrapper=document.createElement('div');
+  wrapper.id='room-chat-input';
+  wrapper.style.cssText='display:flex;gap:6px;padding:8px;background:var(--bg-sub,#0d1a2a);border-top:1px solid var(--border-color,#1a3a4a);';
+  const input=document.createElement('input');
+  input.type='text';input.placeholder='Type a message or call a character...';input.maxLength=200;
+  input.style.cssText='flex:1;padding:6px 10px;background:#0a0f1a;border:1px solid var(--border-color,#1a3a4a);color:#e0e0e0;border-radius:4px;font-family:inherit;font-size:11px;outline:none;';
+  const btn=document.createElement('button');
+  btn.textContent='Send';
+  btn.style.cssText='padding:6px 14px;background:var(--theme-main,#00ffff);color:#000;border:none;border-radius:4px;font-weight:bold;cursor:pointer;font-size:11px;';
+  async function sendRoomChat(){
+    const text=input.value.trim();if(!text)return;
+    addMsg(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
+    if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){
+      const key=await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
+      if(key)lastSeenMessages[key]=true;
+    }
+    checkForReaction(text);
+    input.value='';
+  }
+  btn.addEventListener('click',sendRoomChat);
+  input.addEventListener('keydown',e=>{if(e.key==='Enter')sendRoomChat();});
+  wrapper.append(input,btn);
+  chatArea.parentNode.insertBefore(wrapper,chatArea.nextSibling);
+}
+
 // --- SOLO initRoom ---
 // skipGenerate=true when restoring session (bots already loaded)
 function initRoom(skipGenerate){
@@ -462,14 +522,16 @@ function initRoom(skipGenerate){
     onlineBots={};
     const allChars=getAllCharacters();
     const pool=configSelectedPool.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
-    const count=Math.min(configMaxMembers-1,pool.length,6);
-    pool.slice(0,count).forEach(name=>{
+    const initialCount=Math.min(Math.floor(Math.random()*2)+5,pool.length,configMaxMembers-1);
+    pool.slice(0,initialCount).forEach(name=>{
       const fd=allChars.find(c=>c.name===name);
-      onlineBots[name]={status:Math.random()>0.3?'Studying':'Relaxing',timeSpent:Math.floor(Math.random()*45)+5,energy:Math.floor(Math.random()*40)+60,energyTickStudy:0,energyTickRelax:0,coffeeWaiting:false,coffeeWaitSeconds:0,coffeeMessageId:null,quotes:fd||null,pass:fd?fd.pass:'pass_'+Math.floor(Math.random()*999),isFrozen:false,isLocked:false,color:BOT_COLORS[Math.floor(Math.random()*BOT_COLORS.length)]};
+      onlineBots[name]={status:Math.random()>0.3?'Studying':'Relaxing',timeSpent:Math.floor(Math.random()*45)+5,energy:Math.floor(Math.random()*40)+60,energyTickStudy:0,energyTickRelax:0,coffeeWaiting:false,coffeeWaitSeconds:0,coffeeMessageId:null,quotes:fd||null,pass:fd?fd.pass:'pass_'+Math.floor(Math.random()*999),isFrozen:false,isLocked:false,color:getColorForName(name)};
     });
+    botJoinPool=pool.slice(initialCount);
+    startBotJoiner();
   }else{
     // ensure colors exist after JSON restore
-    for(let n in onlineBots){if(!onlineBots[n].color)onlineBots[n].color=BOT_COLORS[Math.floor(Math.random()*BOT_COLORS.length)];}
+    for(let n in onlineBots){if(!onlineBots[n].color)onlineBots[n].color=getColorForName(n);}
   }
   updateMemberList();
   timerInterval=setInterval(()=>{
@@ -480,10 +542,33 @@ function initRoom(skipGenerate){
     }else updateMemberTimesOnly();
   },1000);
   startSimulation();
+  setupRoomChatInput();
+}
+
+function addBotToRoom(name){
+  const allChars=getAllCharacters();
+  const fd=allChars.find(function(ch){return ch.name===name;});
+  onlineBots[name]={status:Math.random()>0.3?"Studying":"Relaxing",timeSpent:0,energy:Math.floor(Math.random()*40)+60,energyTickStudy:0,energyTickRelax:0,coffeeWaiting:false,coffeeWaitSeconds:0,coffeeMessageId:null,quotes:fd||null,pass:fd?fd.pass:"pass_"+Math.floor(Math.random()*999),isFrozen:false,isLocked:false,color:getColorForName(name)};
+  addMsg("\u{1f6aa} <b>"+sanitizeHTML(name)+"</b> has joined the room.","system-msg");
+  updateMemberList();
+  if(typeof isInMultiplayer==="function"&&isInMultiplayer()&&typeof syncBotState==="function"){
+    const toSync={};for(let n in onlineBots){const b=onlineBots[n];toSync[n]={status:b.status,timeSpent:b.timeSpent,energy:b.energy,coffeeWaiting:b.coffeeWaiting,color:b.color};}
+    syncBotState(toSync);
+  }
+}
+
+function startBotJoiner(){
+  if(botJoinInterval)clearInterval(botJoinInterval);
+  if(!configAllowBotJoin)return;
+  botJoinInterval=setInterval(function(){
+    if(!configAllowBotJoin||botJoinPool.length===0||Object.keys(onlineBots).length>=configMaxMembers-1){clearInterval(botJoinInterval);botJoinInterval=null;return;}
+    const name=botJoinPool.shift();
+    addBotToRoom(name);
+  },Math.floor(Math.random()*480000)+420000);
 }
 
 function saveSoloSession(){
-  saveSession({mode:'solo',userName:myName,theme:document.getElementById('theme-color')?.value||'cyan',roomTheme,userSeconds,userCoins,coffeeStock,configMaxMembers,configSelectionMode,configSelectedPool,configAllowOthers,configAllowLeave,configAllowRejoin,configAllowBotChat,bots:sanitizeBotsForStorage(),chatHistory,deskActive});
+  saveSession({mode:'solo',userName:myName,theme:document.getElementById('theme-color')?.value||'cyan',roomTheme,userSeconds,userCoins,coffeeStock,configMaxMembers,configSelectionMode,configSelectedPool,configAllowOthers,configAllowLeave,configAllowRejoin,configAllowBotChat,configAllowBotJoin,bots:sanitizeBotsForStorage(),chatHistory,deskActive});
 }
 function saveMultiSession(roomId,pw,asHost){
   saveSession({mode:'multi',userName:myName,theme:document.getElementById('theme-color')?.value||'cyan',roomTheme,roomId:roomId||getCurrentRoomId(),roomPassword:pw,isHost:asHost,userSeconds,userCoins,coffeeStock,chatHistory,bots:sanitizeBotsForStorage(),deskActive});
@@ -548,7 +633,7 @@ function startSimulation(){
     if(b.isFrozen||b.coffeeWaiting)return;
     if(b.status==='Studying'){if(configAllowBotChat&&Math.random()>0.4&&b.quotes){addMsg(`💬 <b>${sanitizeHTML(n)}:</b> "${b.quotes.studyQuotes[Math.floor(Math.random()*b.quotes.studyQuotes.length)]}"`,'bot-msg-study');}else{b.status='Relaxing';if(configAllowBotChat)addMsg(`⏳ <b>${sanitizeHTML(n)}:</b> ${b.quotes?'"'+b.quotes.relaxQuotes[Math.floor(Math.random()*b.quotes.relaxQuotes.length)]+'"':'Going to take a quick break.'}`,'bot-msg-relax');updateMemberList();}}
     else{if(b.energy>10){b.status='Studying';if(configAllowBotChat)addMsg(`📖 <b>${sanitizeHTML(n)}:</b> ${b.quotes?'"'+b.quotes.studyQuotes[Math.floor(Math.random()*b.quotes.studyQuotes.length)]+'"':'Back to my books!'}`,'bot-msg-study');updateMemberList();}}
-  },Math.floor(Math.random()*10000)+12000);
+  },Math.floor(Math.random()*60000)+60000);
 }
 
 function updateMemberList(){
@@ -679,6 +764,7 @@ function enterMultiplayerRoom(asHost,roomId,pw){
   saveSession({mode:'multi',userName:name,theme,roomId:rid,roomPassword:rpw,isHost:asHost,userSeconds:0,userCoins:0,coffeeStock:0});
   startMultiplayerTimers(asHost,rid,rpw);
   if(asHost&&mpRoomMeta&&mpRoomMeta.allowBots)setupBotsForMultiplayer(mpRoomMeta);
+  setupRoomChatInput();
 }
 
 function startMultiplayerTimers(asHost,roomId,pw){
@@ -690,7 +776,7 @@ function startMultiplayerTimers(asHost,roomId,pw){
   multiplayerSyncInterval=setInterval(()=>{
     syncMyStatus(myName,userStatus,userSeconds);
     saveMultiSession(roomId,pw,asHost);
-  },10000);
+  },30000);
   botTimerUpdateInterval=setInterval(()=>{
     const bots=typeof getIsHost==='function'&&getIsHost()?onlineBots:(window._mpBots||{});
     for(const n in bots){
@@ -709,11 +795,12 @@ function setupBotsForMultiplayer(meta){
   // generate initial bots
   const allChars=getAllCharacters();
   const pool=configSelectedPool.slice();for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
-  const count=Math.min(3,pool.length);
-  pool.slice(0,count).forEach(name=>{
+  const initialCount=Math.min(Math.floor(Math.random()*2)+5,pool.length);
+  pool.slice(0,initialCount).forEach(name=>{
     const fd=allChars.find(c=>c.name===name);
-    onlineBots[name]={status:Math.random()>0.3?'Studying':'Relaxing',timeSpent:Math.floor(Math.random()*20)+1,energy:Math.floor(Math.random()*40)+60,energyTickStudy:0,energyTickRelax:0,coffeeWaiting:false,coffeeWaitSeconds:0,coffeeMessageId:null,quotes:fd||null,pass:fd?fd.pass:'pass_'+Math.floor(Math.random()*999),isFrozen:false,isLocked:false,color:BOT_COLORS[Math.floor(Math.random()*BOT_COLORS.length)]};
+    onlineBots[name]={status:Math.random()>0.3?'Studying':'Relaxing',timeSpent:Math.floor(Math.random()*20)+1,energy:Math.floor(Math.random()*40)+60,energyTickStudy:0,energyTickRelax:0,coffeeWaiting:false,coffeeWaitSeconds:0,coffeeMessageId:null,quotes:fd||null,pass:fd?fd.pass:'pass_'+Math.floor(Math.random()*999),isFrozen:false,isLocked:false,color:getColorForName(name)};
   });
+  botJoinPool=pool.slice(initialCount);
   // tick bots locally (host only)
   botTickInterval=setInterval(tickBots,1000);
   startSimulation();
@@ -721,7 +808,7 @@ function setupBotsForMultiplayer(meta){
   if(typeof syncBotState==='function'){const toSync={};for(let n in onlineBots){const b=onlineBots[n];toSync[n]={status:b.status,timeSpent:b.timeSpent,energy:b.energy,coffeeWaiting:b.coffeeWaiting,color:b.color};}syncBotState(toSync);}
   botSyncInterval=setInterval(()=>{
     if(typeof syncBotState==='function'){const toSync={};for(let n in onlineBots){const b=onlineBots[n];toSync[n]={status:b.status,timeSpent:b.timeSpent,energy:b.energy,coffeeWaiting:b.coffeeWaiting,color:b.color};}syncBotState(toSync);}
-  },60000);
+  },120000);
 }
 
 // --- Multiplayer callbacks ---
@@ -782,4 +869,4 @@ window.giveCoffeeMp=async function(name){
   if(typeof sendRoomMessage==='function'){const key=await sendRoomMessage(`☕ <b>${sanitizeHTML(myName)}</b> gave coffee to <b>${sanitizeHTML(name)}</b>!`,'bot-msg-study');if(key)lastSeenMessages[key]=true;}
 };
 
-window.onMultiplayerMessagesUpdate=function(msgs){Object.entries(msgs).forEach(([k,m])=>{if(!lastSeenMessages[k]){lastSeenMessages[k]=true;addMsg(m.text,m.type||'system-msg');}});const keys=Object.keys(lastSeenMessages);if(keys.length>500)keys.slice(0,keys.length-500).forEach(k=>delete lastSeenMessages[k]);};
+window.onMultiplayerMessageAdded=function(key,msg){if(!lastSeenMessages[key]){lastSeenMessages[key]=true;addMsg(msg.text,msg.type||'system-msg');if(msg.type==='user-msg'){checkForReaction(msg.text);}}const keys=Object.keys(lastSeenMessages);if(keys.length>500)keys.slice(0,keys.length-500).forEach(k=>delete lastSeenMessages[k]);};
