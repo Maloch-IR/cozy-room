@@ -363,10 +363,10 @@ function renderDeskChat(){
 async function sendDeskChat(){
   const input=document.getElementById('desk-chat-input');if(!input)return;
   const text=input.value.trim();if(!text)return;
-  addMsg(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
   if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){
-    const key=await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
-    if(key)lastSeenMessages[key]=true;
+    await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
+  }else{
+    addMsg(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
   }
   checkForReaction(text);
   input.value='';
@@ -500,10 +500,10 @@ function setupRoomChatInput(){
   btn.style.cssText='padding:6px 14px;background:var(--theme-main,#00ffff);color:#000;border:none;border-radius:4px;font-weight:bold;cursor:pointer;font-size:11px;';
   async function sendRoomChat(){
     const text=input.value.trim();if(!text)return;
-    addMsg(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
     if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){
-      const key=await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
-      if(key)lastSeenMessages[key]=true;
+      await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
+    }else{
+      addMsg(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
     }
     checkForReaction(text);
     input.value='';
