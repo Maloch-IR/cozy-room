@@ -37,10 +37,11 @@ function checkForReaction(text){
           reactionCooldown=true;
           setTimeout(()=>{reactionCooldown=false;},5000);
           const quote=char.reactionQuotes[Math.floor(Math.random()*char.reactionQuotes.length)];
-          setTimeout(()=>{
+          setTimeout(async ()=>{
             addMsg(`💬 <b>${char.name}:</b> "${quote}"`,'bot-msg-study');
             if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){
-              sendRoomMessage(`💬 <b>${char.name}:</b> "${quote}"`,'bot-msg-study');
+              const key = await sendRoomMessage(`💬 <b>${char.name}:</b> "${quote}"`,'bot-msg-study');
+              if(key) lastSeenMessages[key] = true;
             }
           },1000+Math.random()*2000);
         }
@@ -364,7 +365,8 @@ async function sendDeskChat(){
   const input=document.getElementById('desk-chat-input');if(!input)return;
   const text=input.value.trim();if(!text)return;
   if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){
-    await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
+    const key = await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
+    if(key) lastSeenMessages[key] = true;
   }else{
     addMsg(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
   }
@@ -501,7 +503,8 @@ function setupRoomChatInput(){
   async function sendRoomChat(){
     const text=input.value.trim();if(!text)return;
     if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){
-      await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
+      const key = await sendRoomMessage(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
+      if(key) lastSeenMessages[key] = true;
     }else{
       addMsg(`👤 <b>${sanitizeHTML(myName)}:</b> "${sanitizeHTML(text)}"`,'user-msg');
     }
@@ -594,7 +597,11 @@ function triggerCoffeeRequest(name){
   const c=document.getElementById('chat-messages');
   if(c&&c.lastChild){c.lastChild.id=msgId;c.lastChild.querySelector('.coffee-btn').addEventListener('click',()=>giveCoffee(name));}
   updateMemberList();
-  if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function')sendRoomMessage(`😩 <b>${sanitizeHTML(name)}</b> needs coffee! Click ☕ to help.`,'bot-msg-relax');
+  if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){
+    sendRoomMessage(`😩 <b>${sanitizeHTML(name)}</b> needs coffee! Click ☕ to help.`,'bot-msg-relax').then(key => {
+      if(key) lastSeenMessages[key] = true;
+    });
+  }
 }
 
 function expireCoffeeRequest(name){

@@ -1,4 +1,32 @@
-(function(){const FIREBASE_CONFIG={apiKey:"AIzaSyBTVfM8iow9Mqp49yB_esahJcGt5cRiNYo",authDomain:"cozy-room-8ebb7.firebaseapp.com",databaseURL:"https://cozyroom.sda-company-00c.workers.dev",projectId:"cozy-room-8ebb7",storageBucket:"cozy-room-8ebb7.firebasestorage.app",messagingSenderId:"128763332110",appId:"1:128763332110:web:f0b6dda08396f41ab89e5f"};
+(function() {
+    const originalFetch = window.fetch;
+    window.fetch = async function (...args) {
+        let [resource, config] = args;
+        if (typeof resource === 'string' && resource.includes('cozy-room.sda-company-00c.workers.dev')) {
+            config = config || {};
+            config.headers = config.headers || {};
+            if (config.headers instanceof Headers) {
+                config.headers.set('X-App-Token', 'CozyPixelStudyRoomSecret2026!');
+            } else {
+                config.headers['X-App-Token'] = 'CozyPixelStudyRoomSecret2026!';
+            }
+        }
+        return originalFetch(resource, config);
+    };
+
+    const OriginalWebSocket = window.WebSocket;
+    window.WebSocket = function (url, protocols) {
+        if (typeof url === 'string' && url.includes('cozy-room.sda-company-00c.workers.dev')) {
+            const wsUrl = new URL(url);
+            wsUrl.searchParams.set('x-app-token', 'CozyPixelStudyRoomSecret2026!');
+            url = wsUrl.toString();
+        }
+        return protocols ? new OriginalWebSocket(url, protocols) : new OriginalWebSocket(url);
+    };
+    window.WebSocket.prototype = OriginalWebSocket.prototype;
+})();
+
+(function(){const FIREBASE_CONFIG={apiKey:"AIzaSyBTVfM8iow9Mqp49yB_esahJcGt5cRiNYo",authDomain:"cozy-room-8ebb7.firebaseapp.com",databaseURL:"https://cozy-room.sda-company-00c.workers.dev",projectId:"cozy-room-8ebb7",storageBucket:"cozy-room-8ebb7.firebasestorage.app",messagingSenderId:"128763332110",appId:"1:128763332110:web:f0b6dda08396f41ab89e5f"};
 function waitForFirebase(cb){if(typeof firebase!=='undefined'&&firebase.apps!==undefined){cb();}else{setTimeout(()=>waitForFirebase(cb),100);}}
 function sanitizeKey(s){return String(s).replace(/[.#$\[\]/]/g,'_');}
 waitForFirebase(()=>{if(!firebase.apps.length){firebase.initializeApp(FIREBASE_CONFIG);}const db=firebase.database();let currentRoomId=null;let isMultiplayer=false;let isHost=false;let emptyRoomTimer=null;
