@@ -10,8 +10,7 @@
     var membersSubscription=null;
     var botsSubscription=null;
     var roomSubscription=null;
-    var heartbeatInterval=null;
-    var emptyRoomTimer=null;
+    var presenceChannel=null;
 
     function sanitizeKey(s){return String(s).replace(/[.#$\[\]/]/g,'_');}
     function generateRoomId(){return Math.random().toString(36).substr(2,6).toUpperCase();}
@@ -75,53 +74,10 @@
             user_name:userName,
             status:'Studying',
             time_spent:prevTime,
-            is_host:!!isHostUser,
-            last_seen:new Date().toISOString()
+            is_host:!!isHostUser
         }],{onConflict:'room_id,user_name'});
 
         initRoomRealtime(roomId);
-        startHeartbeat(roomId,userName);
-        startEmptyRoomCheck(roomId);
-    }
-
-    function startHeartbeat(roomId,userName){
-        if(heartbeatInterval)clearInterval(heartbeatInterval);
-        heartbeatInterval=setInterval(async function(){
-            await supabase.from('room_members').upsert([{
-                room_id:roomId,
-                user_name:userName,
-                last_seen:new Date().toISOString()
-            }],{onConflict:'room_id,user_name'});
-            if(isHost){
-                var cutOff=new Date(Date.now()-30000).toISOString();
-                await supabase.from('room_members').delete().eq('room_id',roomId).lt('last_seen',cutOff);
-            }
-        },10000);
-    }
-
-    function startEmptyRoomCheck(roomId){
-        if(emptyRoomTimer)clearInterval(emptyRoomTimer);
-        emptyRoomTimer=setInterval(async function(){
-            var membersResult=await supabase.from('room_members').select('id').eq('room_id',roomId);
-            var memberCount=membersResult.data?membersResult.data.length:0;
-            if(memberCount===0){
-                var roomResult=await supabase.from('rooms').select('empty_at').eq('id',roomId).maybeSingle();
-                var room=roomResult.data;
-                if(!room)return;
-                var emptyAt=room.empty_at||0;
-                if(emptyAt===0){
-                    await supabase.from('rooms').update({empty_at:Date.now()}).eq('id',roomId);
-                }else if(Date.now()-emptyAt>30*60*1000){
-                    await supabase.from('rooms').delete().eq('id',roomId);
-                    clearInterval(emptyRoomTimer);
-                }
-            }else{
-                var roomCheck=await supabase.from('rooms').select('empty_at').eq('id',roomId).maybeSingle();
-                if(roomCheck.data&&roomCheck.data.empty_at!==0){
-                    await supabase.from('rooms').update({empty_at:0}).eq('id',roomId);
-                }
-            }
-        },180000);
     }
 
     function initRoomRealtime(roomId){
@@ -189,6 +145,41 @@
                 }
             })
             .subscribe();
+
+        presenceChannel=supabase.channel('room_presence_'+roomId);
+        presenceChannel.on('presence',{event:'sync'},function(){
+            var state=presenceChannel.presenceState();
+            var membersObj={};
+            for(var key in state){
+                var presences=state[key];
+                for(var i=0;i<presences.length;i++){
+                    var p=presences[i];
+                    membersObj[p.user_name]={
+                        status:p.status||'Studying',
+                        timeSpent:p.timeSpent||0,
+                        isHost:p.isHost||false
+                    };
+                }
+            }
+            if(typeof window.onMultiplayerMembersUpdate==='function'){
+                var myUserName=null;
+                try{myUserName=JSON.parse(localStorage.getItem('cozy_session')).userName;}catch(e){}
+                window.onMultiplayerMembersUpdate(membersObj,myUserName);
+            }
+        });
+        presenceChannel.subscribe(function(status){
+            if(status==='SUBSCRIBED'){
+                var saved;
+                try{saved=JSON.parse(localStorage.getItem('cozy_mp_session'))||{};}catch(e){saved={};}
+                var prevTime=saved[roomId]?saved[roomId].timeSpent||0:0;
+                presenceChannel.track({
+                    user_name:userName,
+                    status:'Studying',
+                    timeSpent:prevTime,
+                    isHost:!!isHostUser
+                });
+            }
+        });
     }
 
     function cleanupSubscriptions(){
@@ -196,15 +187,23 @@
         if(membersSubscription){supabase.removeChannel(membersSubscription);membersSubscription=null;}
         if(botsSubscription){supabase.removeChannel(botsSubscription);botsSubscription=null;}
         if(roomSubscription){supabase.removeChannel(roomSubscription);roomSubscription=null;}
+        if(presenceChannel){supabase.removeChannel(presenceChannel);presenceChannel=null;}
     }
 
     window.syncMyStatus=async function(userName,status,timeSpent){
         if(!currentRoomId)return;
         await supabase.from('room_members').update({
             status:status,
-            time_spent:Math.floor(timeSpent),
-            last_seen:new Date().toISOString()
+            time_spent:Math.floor(timeSpent)
         }).eq('room_id',currentRoomId).eq('user_name',userName);
+        if(presenceChannel){
+            presenceChannel.track({
+                user_name:userName,
+                status:status,
+                timeSpent:Math.floor(timeSpent),
+                isHost:isHost
+            });
+        }
         var saved;
         try{saved=JSON.parse(localStorage.getItem('cozy_mp_session'))||{};}catch(e){saved={};}
         saved[currentRoomId]={timeSpent:timeSpent,lastSeen:Date.now()};
@@ -215,7 +214,7 @@
         if(!currentRoomId)return null;
         var result=await supabase.from('room_messages').insert([{
             room_id:currentRoomId,
-            user_name:'system',
+            user_name:window.myName||'system',
             message:text,
             msg_type:type||'system-msg'
         }]).select();
@@ -250,13 +249,17 @@
                 color:b.color||'#aaa'
             });
         }
-        if(rows.length===0)return;
-        await supabase.from('room_bots').delete().eq('room_id',currentRoomId);
-        await supabase.from('room_bots').insert(rows);
+        if(rows.length===0){
+            await supabase.from('room_bots').delete().eq('room_id',currentRoomId);
+            return;
+        }
+        await supabase.from('room_bots').upsert(rows,{onConflict:'room_id,bot_name'});
     };
 
     window.deleteAllMessages=async function(roomId){
         if(!roomId)return;
+        var roomResult=await supabase.from('rooms').select('host_name').eq('id',roomId).maybeSingle();
+        if(!roomResult.data||roomResult.data.host_name!==window.myName)return;
         await supabase.from('room_messages').delete().eq('room_id',roomId);
     };
 
@@ -277,11 +280,12 @@
 
     window.leaveRoomGracefully=async function(userName,deleteRoom){
         if(!currentRoomId)return;
-        if(heartbeatInterval){clearInterval(heartbeatInterval);heartbeatInterval=null;}
-        if(emptyRoomTimer){clearInterval(emptyRoomTimer);emptyRoomTimer=null;}
         cleanupSubscriptions();
         if(deleteRoom){
-            await supabase.from('rooms').delete().eq('id',currentRoomId);
+            var roomResult=await supabase.from('rooms').select('host_name').eq('id',currentRoomId).maybeSingle();
+            if(roomResult.data&&roomResult.data.host_name===userName){
+                await supabase.from('rooms').delete().eq('id',currentRoomId);
+            }
         }else{
             await supabase.from('room_members').delete().eq('room_id',currentRoomId).eq('user_name',userName);
         }

@@ -179,8 +179,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   document.getElementById('btn-power').addEventListener('click',async()=>{
     if(typeof isInMultiplayer==='function'&&isInMultiplayer()){
+      var leavingRoomId=getCurrentRoomId();
       if(typeof getIsHost==='function'&&getIsHost()){if(!confirm("Leaving will DELETE the room for everyone. Sure?"))return;await leaveRoomGracefully(myName,true);}
       else await leaveRoomGracefully(myName,false);
+      if(leavingRoomId){try{var mr=JSON.parse(localStorage.getItem('cozy_my_rooms'))||[];mr=mr.filter(function(id){return id!==leavingRoomId;});localStorage.setItem('cozy_my_rooms',JSON.stringify(mr));}catch(e){}
+        try{var pwS=JSON.parse(localStorage.getItem('cozy_room_pw'))||{};delete pwS[leavingRoomId];localStorage.setItem('cozy_room_pw',JSON.stringify(pwS));}catch(e){}}
     }
     clearAllIntervals();clearSession();resetUI();
   });
@@ -475,6 +478,9 @@ function resetUI(){
   document.getElementById('app-screen').classList.add('hidden');
   document.getElementById('login-screen').classList.remove('hidden');
   document.getElementById('btn-admin-panel').style.display='none';
+  document.getElementById('room-created-info').classList.add('hidden');
+  document.getElementById('room-link-display').innerText='';
+  document.getElementById('room-id-display').innerText='';
   document.getElementById('user-status-badge').innerText='Studying 📖';
   document.getElementById('user-status-badge').className='status-badge studying';
   const pauseBtn=document.getElementById('btn-pause');pauseBtn.textContent='⏸ BREAK';pauseBtn.style.background='#2a1a1a';pauseBtn.style.borderColor='#e67e22';pauseBtn.style.color='#e67e22';
@@ -484,7 +490,10 @@ function resetUI(){
   updateShopDisplay();
 }
 
-window.onRoomDeleted=function(){clearAllIntervals();if(typeof leaveRoomGracefully==='function'&&getCurrentRoomId()){leaveRoomGracefully(myName,false);}clearSession();alert('⚠️ Room was deleted by host.');resetUI();};
+window.onRoomDeleted=function(){clearAllIntervals();var deletedRoomId=getCurrentRoomId();if(typeof leaveRoomGracefully==='function'&&deletedRoomId){leaveRoomGracefully(myName,false);}
+  if(deletedRoomId){try{var mr=JSON.parse(localStorage.getItem('cozy_my_rooms'))||[];mr=mr.filter(function(id){return id!==deletedRoomId;});localStorage.setItem('cozy_my_rooms',JSON.stringify(mr));}catch(e){}
+    try{var pwS=JSON.parse(localStorage.getItem('cozy_room_pw'))||{};delete pwS[deletedRoomId];localStorage.setItem('cozy_room_pw',JSON.stringify(pwS));}catch(e){}}
+  clearSession();alert('⚠️ Room was deleted by host.');resetUI();};
 
 // --- Room Chat Input ---
 function setupRoomChatInput(){
@@ -720,6 +729,9 @@ async function loadActiveRooms(){
 }
 
 async function createRoom(){
+  document.getElementById('room-created-info').classList.add('hidden');
+  document.getElementById('room-link-display').innerText='';
+  document.getElementById('room-id-display').innerText='';
   const pw=document.getElementById('host-password').value.trim();if(!pw){alert('Set a password!');return;}
   const name=document.getElementById('username').value.trim();
   const maxM=parseInt(document.getElementById('host-max-members').value)||10;
