@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.getElementById('btn-admin-panel').addEventListener('click',()=>{document.getElementById('admin-modal').classList.remove('hidden');document.getElementById('allow-bot-chat').checked=configAllowBotChat;renderAdminPanelUsers();});
   document.getElementById('btn-close-admin').addEventListener('click',()=>document.getElementById('admin-modal').classList.add('hidden'));
   document.getElementById('allow-bot-chat').addEventListener('change',e=>{configAllowBotChat=e.target.checked;});
-  document.getElementById('btn-clear-chat').addEventListener('click',async()=>{chatHistory=[];document.getElementById('chat-messages').innerHTML='';addMsg('🗑️ Chat cleared by host.','system-msg');if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){try{await firebase.database().ref('rooms/'+getCurrentRoomId()+'/messages').remove();}catch(e){}const key=await sendRoomMessage('🗑️ Chat cleared by host.','system-msg');if(key)lastSeenMessages[key]=true;}});
+  document.getElementById('btn-clear-chat').addEventListener('click',async()=>{chatHistory=[];document.getElementById('chat-messages').innerHTML='';addMsg('🗑️ Chat cleared by host.','system-msg');if(typeof isInMultiplayer==='function'&&isInMultiplayer()&&typeof sendRoomMessage==='function'){try{if(typeof deleteAllMessages==='function')await deleteAllMessages(getCurrentRoomId());}catch(e){}const key=await sendRoomMessage('🗑️ Chat cleared by host.','system-msg');if(key)lastSeenMessages[key]=true;}});
   document.getElementById('weather-select').addEventListener('change',e=>changeWeather(e.target.value));
   initPomodoro();
 
@@ -794,7 +794,7 @@ function startMultiplayerTimers(asHost,roomId,pw){
   },60000);
 }
 
-// FIX: properly init bots and sync to Firebase so all users see them
+// FIX: properly init bots and sync to Supabase so all users see them
 function setupBotsForMultiplayer(meta){
   configMaxMembers=meta.maxMembers||10;
   configSelectedPool=getAllCharacters().map(c=>c.name);
@@ -811,7 +811,7 @@ function setupBotsForMultiplayer(meta){
   // tick bots locally (host only)
   botTickInterval=setInterval(tickBots,1000);
   startSimulation();
-  // sync bots to Firebase immediately + every 60s so ALL users see them
+  // sync bots to Supabase immediately + every 60s so ALL users see them
   if(typeof syncBotState==='function'){const toSync={};for(let n in onlineBots){const b=onlineBots[n];toSync[n]={status:b.status,timeSpent:b.timeSpent,energy:b.energy,coffeeWaiting:b.coffeeWaiting,color:b.color};}syncBotState(toSync);}
   botSyncInterval=setInterval(()=>{
     if(typeof syncBotState==='function'){const toSync={};for(let n in onlineBots){const b=onlineBots[n];toSync[n]={status:b.status,timeSpent:b.timeSpent,energy:b.energy,coffeeWaiting:b.coffeeWaiting,color:b.color};}syncBotState(toSync);}
