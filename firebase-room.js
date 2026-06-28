@@ -24,6 +24,17 @@
         return protocols ? new OriginalWebSocket(url, protocols) : new OriginalWebSocket(url);
     };
     window.WebSocket.prototype = OriginalWebSocket.prototype;
+
+    const OriginalXHR = window.XMLHttpRequest;
+    const originalOpen = OriginalXHR.prototype.open;
+    OriginalXHR.prototype.open = function (method, url, ...rest) {
+        if (typeof url === 'string' && url.includes('cozy-room.sda-company-00c.workers.dev')) {
+            const xhrUrl = new URL(url);
+            xhrUrl.searchParams.set('x-app-token', 'CozyPixelStudyRoomSecret2026!');
+            url = xhrUrl.toString();
+        }
+        return originalOpen.call(this, method, url, ...rest);
+    };
 })();
 
 (function(){const FIREBASE_CONFIG={apiKey:"AIzaSyBTVfM8iow9Mqp49yB_esahJcGt5cRiNYo",authDomain:"cozy-room-8ebb7.firebaseapp.com",databaseURL:"https://cozy-room.sda-company-00c.workers.dev",projectId:"cozy-room-8ebb7",storageBucket:"cozy-room-8ebb7.firebasestorage.app",messagingSenderId:"128763332110",appId:"1:128763332110:web:f0b6dda08396f41ab89e5f"};
