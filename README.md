@@ -18,6 +18,10 @@
 
 [Explore Features](#-key-features) • [Quick Start](#-how-to-use) • [Launch Application 🚀](https://Maloch-IR.github.io/cozy-room/)
 
+<br>
+<img src="./screenshot.png" alt="Cozy Room Gameplay Preview" width="100%" style="border-radius: 8px; border: 2px solid #2b2336; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+<br>
+
 </div>
 
 ---
