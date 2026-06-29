@@ -1,44 +1,65 @@
-# 👾 Cozy Room
+<div align="center">
 
-> A Pixel-Art Multiplayer Study & Focus Space
+# 👾 COZY ROOM
+**A Pixel-Art Multiplayer Study & Focus Space**
 
----
-
-<p align="center">
-  <a href="https://Maloch-IR.github.io/cozy-room/">
-    <img src="https://img.shields.io/badge/%F0%9F%9A%80%20Live%20Demo-Play%20Now-00ffff?style=for-the-badge&logo=gamepad&logoColor=black" alt="Live Demo" height="40">
-  </a>
-</p>
+[![Live Demo](https://img.shields.io/badge/%F0%9F%9A%80_Live_Preview-Play_Now-00ffff?style=for-the-badge&logo=gamepad&logoColor=000)](https://Maloch-IR.github.io/cozy-room/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-ff00ff?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat-square&logo=javascript" alt="JavaScript">
-  <img src="https://img.shields.io/badge/CSS3-Retro%20Pixel-ff00ff?style=flat-square&logo=css3" alt="CSS">
-  <img src="https://img.shields.io/badge/Supabase-Realtime-2ecc71?style=flat-square&logo=supabase" alt="Supabase">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JS" />
+  <img src="https://img.shields.io/badge/Supabase-3FC68D?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
 </p>
 
 ---
 
-### 🌟 About The Project
+### ✨ Escape the lonely grind. Pull up a pixelated chair, sync your timers, and start focusing alongside friends and interactive AI companions.
 
-**Cozy Room** is a cozy, real-time multiplayer focus space inspired by classic retro RPG aesthetics. It provides a pixel-perfect environment where students, developers, and creators can join virtual rooms together, sync their study timers in real-time, chat, and keep each other motivated in a warm, gaming-inspired atmosphere.
+[Explore Features](#-key-features) • [Quick Start](#-how-to-use) • [Launch Application 🚀](https://Maloch-IR.github.io/cozy-room/)
 
-No more lonely grinds—just pull up a pixelated chair, select your custom theme, and start focusing alongside friends or built-in interactive companions.
-
----
-
-### ⚡ Key Features
-
-* **Realtime Sync:** Powered by Supabase Presence for sub-100ms real-time member tracking and live status synchronization.
-* **Interactive Bots:** Animated pixel companions (SpongeBob, Patrick, and more) with custom retro dialogues, energy depletion mechanics, and coffee-refill interactions.
-* **Host Controls:** Full room management allowing hosts to dynamically toggle environmental themes and trigger real-time pixel weather effects.
+</div>
 
 ---
 
-### 🎮 How to Use
+## 📖 About The Project
 
-1. Click on the **[🚀 Live Demo](https://Maloch-IR.github.io/cozy-room/)** link.
-2. Enter your username and customize your room's pixel theme color.
-3. Host a brand new study space or enter a room code to instantly join your friends!
+**Cozy Room** transforms boring study sessions into an engaging, retro-RPG inspired multiplayer experience. Built specifically for developers, students, and creators who thrive in shared environments, it allows you to create private or public digital rooms where timers, environments, and statistics sync flawlessly in real-time. 
+
+Whether you want to deeply focus alone with animated pixel pets or host a massive co-working session with your team, Cozy Room bridges the gap between productivity and gaming aesthetics.
 
 ---
-<p align="center">Made with 👾 for focus masters.</p>
+
+## ⚡ Key Features
+
+| Feature | Technology | Description |
+| :--- | :--- | :--- |
+| **⚡ Sub-100ms Sync** | `Supabase Presence` | Real-time member tracking, live status updates, and zero-latency state synchronization across all connected peers. |
+| **🤖 Interactive Companions** | `Custom Bot AI` | Animated pixel NPCs (SpongeBob, Patrick, etc.) featuring dynamic dialogue trees, energy depletion, and coffee-refill interactions. |
+| **🎛️ Host Authority** | `State Broadcast` | Complete room personalization. Hosts can dynamically shift the environmental aesthetic and trigger immersive, real-time pixel weather sequences. |
+
+---
+
+## 🎮 How to Use
+
+### 1️⃣ Launch & Identity
+Click on the **[Live Demo](https://Maloch-IR.github.io/cozy-room/)** link, choose your unique username, and pick a custom retro profile color palette.
+
+### 2️⃣ Create or Match
+* **Host:** Generate a fresh session ID instantly and share it with your study group.
+* **Join:** Paste a friend's room code to instantly drop your avatar right next to theirs.
+
+### 3️⃣ Focus & Interact
+Set your timers, trigger ambient background effects, and talk with both human peers and AI bots to keep the burnout away.
+
+---
+
+<div align="center">
+
+### 🛠️ Built With
+
+`JavaScript (ES6+)` • `Supabase Realtime Engine` • `HTML5 Canvas / Custom CSS Pixel Art`
+
+Developed with 👾 for focus masters.
+
+</div>
